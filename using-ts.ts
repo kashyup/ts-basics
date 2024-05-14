@@ -83,4 +83,39 @@ const myProduct :Product= {
     onSale:true
 }
 
+//types of arrray declaration 
+
+/** you can decalare an array of strings or array of numbers which is known as 
+ * specific type of array 
+ * for eg 
+ * 
+ * const arr:number[] = [1,2,3,4];
+ * const newArr:string[] = ['a','b','c','d'];
+ */
+
+
+
 console.log("Title:"+myProduct.details.title);
+
+
+/** array of any type */
+
+const mixedArray :any[] =[1,2,'hello',true];
+mixedArray.push(false);
+
+console.log('mixed-array[2]:'+mixedArray[2]);
+
+const unionArray :(number|string|boolean)[]=['hello',true,3,4,5];
+/** order of the array does not matter in this case */
+console.log("unionArray[4]:"+unionArray[4]);
+
+/** <---------------Tuples types------------------> */
+// in tuples you can add more than one type of data but indexing is fixed
+//and you can do push operation on tuples array without erro
+const tuplesArray:[number,string]=[1,'hello'];
+
+tuplesArray.push(3);
+const tuplesArrayLength=tuplesArray.length;
+console.log('tuplesArray length after push:'+tuplesArrayLength);
+console.log('tuplesArray[0]:'+tuplesArray[0]);
+
